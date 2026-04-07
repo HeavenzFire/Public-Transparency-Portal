@@ -1,0 +1,3 @@
+[Media Kit Placeholder]
+This file represents the Investigative Media Kit.
+In a production environment, this would be a ZIP file containing assets.
