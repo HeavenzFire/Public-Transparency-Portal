@@ -3,9 +3,31 @@ import { AuditTrail } from './components/AuditTrail';
 import { ForensicVault } from './components/ForensicVault';
 import { LegalPrecedent } from './components/LegalPrecedent';
 import { MediaKit } from './components/MediaKit';
+import { CPSImpact } from './components/CPSImpact';
+import { FatalityAudit } from './components/FatalityAudit';
+import { ProceduralCompliance } from './components/ProceduralCompliance';
+import { EscalationPlan } from './components/EscalationPlan';
+import { StrategicOverrides } from './components/StrategicOverrides';
+import { FederalDropBrief } from './components/FederalDropBrief';
+import { StatutoryCollisionMatrix } from './components/StatutoryCollisionMatrix';
+import { MetadataAuditTool } from './components/MetadataAuditTool';
+import { PolicyViolationNotice } from './components/PolicyViolationNotice';
+import { CountyFiscalAudit } from './components/CountyFiscalAudit';
+import { OIGSubmission } from './components/OIGSubmission';
+import { NationalAttritionMap } from './components/NationalAttritionMap';
+import { CountdownTimer } from './components/CountdownTimer';
+import { SystemicAttritionLogs } from './components/SystemicAttritionLogs';
+import { VeteranSupportKit } from './components/VeteranSupportKit';
+import { SystemStatus } from './components/SystemStatus';
+import { TheConstellation } from './components/TheConstellation';
+import { MotionForReunification } from './components/MotionForReunification';
+import { SunsetPackage } from './components/SunsetPackage';
+import { HyperDiagnostics } from './components/HyperDiagnostics';
+import { ForensicExtraction } from './components/ForensicExtraction';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { Github, ShieldAlert, FileText, BarChart3, Scale, Mail } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Github, ShieldAlert, FileText, BarChart3, Scale, Mail, Users, AlertTriangle, Zap, Globe, Cpu, Star, Activity } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function App() {
@@ -49,7 +71,7 @@ export default function App() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-destructive opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-destructive"></span>
             </span>
-            Active Regulatory Breach
+            Active Forensic Audit: ZYLPHA-128 (128:1 Core)
           </motion.div>
           
           <motion.h1 
@@ -57,7 +79,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight"
           >
-            Establishing the <span className="text-primary italic">Public Record</span>
+            Systemic <span className="text-primary italic">Strategic Overrides</span>
           </motion.h1>
           
           <motion.p 
@@ -66,7 +88,7 @@ export default function App() {
             transition={{ delay: 0.1 }}
             className="text-xl md:text-2xl text-muted-foreground leading-relaxed"
           >
-            A sovereign evidence repository documenting the $202M economic impact of §300.701 on veteran-owned businesses. We transition from filing reports to establishing the record.
+            Leveraging the Federal Courtroom, the Sunset Review, and the National Ledger. Texas is Patient Zero for a $28.4 Billion national economic breach.
           </motion.p>
 
           <motion.div 
@@ -77,27 +99,115 @@ export default function App() {
           >
             <Button size="lg" className="h-14 px-8 text-lg gap-2">
               <BarChart3 className="w-5 h-5" />
-              View the Ledger
+              Explore the Data
             </Button>
             <Button size="lg" variant="outline" className="h-14 px-8 text-lg gap-2">
               <FileText className="w-5 h-5" />
-              Read the Complaint
+              View Audit Logs
             </Button>
           </motion.div>
         </section>
 
-        <Separator />
+        <CountdownTimer />
 
-        {/* Content Sections */}
-        <EconomicImpact />
-        <Separator />
-        <AuditTrail />
-        <Separator />
-        <ForensicVault />
-        <Separator />
-        <LegalPrecedent />
-        <Separator />
-        <MediaKit />
+        <Tabs defaultValue="strategic-overrides" className="w-full">
+          <div className="flex justify-center mb-12">
+            <TabsList className="grid w-full max-w-6xl grid-cols-7 h-12">
+              <TabsTrigger value="strategic-overrides" className="gap-2">
+                <Zap className="w-4 h-4" />
+                Strategic Overrides
+              </TabsTrigger>
+              <TabsTrigger value="the-constellation" className="gap-2">
+                <Star className="w-4 h-4" />
+                The Constellation
+              </TabsTrigger>
+              <TabsTrigger value="national-attrition" className="gap-2">
+                <Globe className="w-4 h-4" />
+                National Attrition
+              </TabsTrigger>
+              <TabsTrigger value="cps-audit" className="gap-2">
+                <Users className="w-4 h-4" />
+                CPS Audit
+              </TabsTrigger>
+              <TabsTrigger value="veteran-tax" className="gap-2">
+                <Scale className="w-4 h-4" />
+                Veteran Tax
+              </TabsTrigger>
+              <TabsTrigger value="system-revelation" className="gap-2">
+                <Cpu className="w-4 h-4" />
+                System REVELATION
+              </TabsTrigger>
+              <TabsTrigger value="hyper-diagnostics" className="gap-2">
+                <Activity className="w-4 h-4" />
+                Hyper_Diagnostics
+              </TabsTrigger>
+            </TabsList>
+          </div>
+
+          <TabsContent value="strategic-overrides" className="space-y-24">
+            <StrategicOverrides />
+            <Separator />
+            <SunsetPackage />
+            <Separator />
+            <SystemicAttritionLogs />
+          </TabsContent>
+
+          <TabsContent value="the-constellation" className="space-y-24">
+            <TheConstellation />
+          </TabsContent>
+
+          <TabsContent value="national-attrition" className="space-y-24">
+            <NationalAttritionMap />
+          </TabsContent>
+
+          <TabsContent value="cps-audit" className="space-y-24">
+            <MotionForReunification />
+            <Separator />
+            <FederalDropBrief />
+            <Separator />
+            <StatutoryCollisionMatrix />
+            <Separator />
+            <MetadataAuditTool />
+            <Separator />
+            <PolicyViolationNotice />
+            <Separator />
+            <CountyFiscalAudit />
+            <Separator />
+            <CPSImpact />
+            <Separator />
+            <FatalityAudit />
+            <Separator />
+            <ProceduralCompliance />
+            <Separator />
+            <EscalationPlan />
+          </TabsContent>
+
+          <TabsContent value="veteran-tax" className="space-y-24">
+            <EconomicImpact />
+            <Separator />
+            <VeteranSupportKit />
+            <Separator />
+            <AuditTrail />
+            <Separator />
+            <ForensicVault />
+            <Separator />
+            <LegalPrecedent />
+            <Separator />
+            <MediaKit />
+          </TabsContent>
+
+          <TabsContent value="system-revelation" className="space-y-24">
+            <SystemStatus />
+          </TabsContent>
+
+          <TabsContent value="hyper-diagnostics" className="space-y-24">
+            <HyperDiagnostics />
+            <Separator />
+            <OIGSubmission />
+            <Separator />
+            <ForensicExtraction />
+          </TabsContent>
+        </Tabs>
 
         {/* Call to Action */}
         <section className="py-24 text-center space-y-8 bg-muted/50 rounded-3xl border-2 border-dashed border-muted-foreground/20">

@@ -23,6 +23,12 @@ const mediaAssets = [
     icon: Download,
     size: '12.4 MB',
   },
+  {
+    title: 'Systemic Attrition Logs (JSON)',
+    description: 'Documented evidence of agency non-responses and bounced emails.',
+    icon: Mail,
+    size: '840 KB',
+  },
 ];
 
 export function MediaKit() {
@@ -49,7 +55,7 @@ export function MediaKit() {
               <p className="text-primary font-bold">To: Investigative Desk</p>
               <p className="text-primary font-bold">Subject: DATA RELEASE: Forensic Audit of §300.701 and the $202M Veteran Tax</p>
               <Separator className="my-2" />
-              <p>The full dataset, including the fee-setting logic gaps and the documented economic harm to veteran-owned micro-businesses, has been moved to a public-facing transparency portal.</p>
+              <p>The full dataset, including the fee-setting logic gaps, the documented economic harm to veteran-owned micro-businesses, and the <strong>Systemic Attrition Logs</strong> (evidence of agency gatekeeping), has been moved to a public-facing transparency portal.</p>
               <p className="text-primary underline">Portal Link: [Your GitHub Pages URL]</p>
               <p>Key Finding: 3,233% fee increase implemented without the required fiscal impact analysis.</p>
             </div>
